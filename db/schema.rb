@@ -12,6 +12,15 @@
 
 ActiveRecord::Schema.define(version: 2018_09_13_234326) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "adminpack"
+  enable_extension "plpgsql"
+
+  create_table "clientes", id: false, force: :cascade do |t|
+    t.decimal "cedula", precision: 10
+    t.string "nombre", limit: 10
+  end
+
   create_table "products", force: :cascade do |t|
     t.string "name"
     t.text "description"

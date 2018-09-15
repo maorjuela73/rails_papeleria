@@ -1,0 +1,20 @@
+En PGAdmin
+Crear base de datos
+Crear usuario
+
+En el config/database.yml configurar lo siguiente:
+  adapter: postgresql
+  username: appadmin
+  password: appadmin
+  --Tambien el nombre de la base de datos
+
+Se baja en el gemfile lo siguiente:
+# Use postgresql as the database for Active Record
+gem 'pg'
+# Use bootstrap to make an amazing app
+gem 'bootstrap'
+
+luego se le da $bundle
+
+# Tuve problemas instalando la gem pg (Solved)
+https://stackoverflow.com/questions/4827092/unable-to-install-pg-gem
